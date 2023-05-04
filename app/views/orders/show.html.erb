@@ -1,3 +1,18 @@
+<!DOCTYPE html>
+<html>
+<head>
+<%= stylesheet_link_tag 'https://cdn.jsdelivr.net/npm/bootstrap@4.6.0/dist/css/bootstrap.min.css' %>
+    <%= javascript_include_tag 'https://cdn.jsdelivr.net/npm/bootstrap@4.6.0/dist/js/bootstrap.min.js' %>
+<%= stylesheet_link_tag 'https://cdn.jsdelivr.net/npm/bootstrap@5.0.1/dist/css/bootstrap.min.css' %>
+    <%= javascript_include_tag 'https://cdn.jsdelivr.net/npm/bootstrap5.0.1/dist/js/bootstrap.min.js' %>
+</head>
+
+<body>
+  <%= yield %>
+</body>
+
+<html>
+
 <section class="orders-show">
 
   <header class="page-header">
@@ -6,6 +21,38 @@
 
   <div class="order-summary jumbotron">
     <h4>Thank you for your order!</h4>
+    <p> Here is a summary of your order! </p>
+    <p> Email used: <%= @order.email %> </p>
+  </div>
+
+  <div>
+  <div class="order-details">
+    <table class="table table-striped">
+      <thead>
+        <tr>
+          <th>Product</th>
+          <th>Description</th>
+          <th>Quantity</th>
+          <th>Price</th>
+        </tr>
+      </thead>
+      <tbody>
+        <% @order.line_items.each do |line_item| %>
+          <tr>
+            <td>
+              <%= image_tag line_item.product.image.url(:thumb) %>
+              <%= link_to line_item.product.name, line_item.product %>
+            </td>
+            <td><%= line_item.product.description %></td>
+            <td><%= line_item.quantity %></td>
+          </tr>
+        <% end %>
+        <tr>
+          <td colspan="3"><strong>Total:</strong></td>
+          <td>$<%= @order.total %></td>
+        </tr>
+      </tbody>
+    </table>
   </div>
 
   <%= link_to "Continue Shopping", root_path, class: 'btn btn-lg btn-primary' %>
