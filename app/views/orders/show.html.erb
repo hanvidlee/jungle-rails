@@ -41,10 +41,13 @@
           <tr>
             <td>
               <%= image_tag line_item.product.image.url(:thumb) %>
-              <%= link_to line_item.product.name, line_item.product %>
             </td>
-            <td><%= line_item.product.description %></td>
+            <td> 
+            <h4> <%= line_item.product.name%> </h4>
+            <br>
+             <%= line_item.product.description %></td>
             <td><%= line_item.quantity %></td>
+            <td>$<%= line_item.product.price %> </td>
           </tr>
         <% end %>
         <tr>
