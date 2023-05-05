@@ -40,7 +40,7 @@
         <% @order.line_items.each do |line_item| %>
           <tr>
             <td>
-              <%= image_tag line_item.product.image.url(:thumb) %>
+              <%= image_tag line_item.product.image.tiny.url %>
             </td>
             <td> 
             <h4> <%= line_item.product.name%> </h4>
