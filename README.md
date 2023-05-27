@@ -7,18 +7,18 @@ A mini e-commerce application built with Rails 6.1 for purposes of teaching Rail
 This is the main page where a user can see all the products listed out regardless of which category it belongs to.
 
 This is the main page where a user can see all the products listed out regardless of which category it belongs to.
-!["Screenshot of main page 1"]()
-!["Screenshot of main page 2"]()
+!["Screenshot of main page 1"](https://github.com/hanvidlee/jungle-rails/blob/master/docs/home-page-1.png)
+!["Screenshot of main page 2"](https://github.com/hanvidlee/jungle-rails/blob/master/docs/home-page-2.png)
 On the nav bar, users can select the category they want and it will take them to that category's list of products.
-!["Screenshot of category page"]()
+!["Screenshot of category page"](https://github.com/hanvidlee/jungle-rails/blob/master/docs/category-page.png)
 If the user is interested in a specific product, they can click on it and they will be redirected to that product page.
-!["Screenshot of product page"]()
+!["Screenshot of product page"](https://github.com/hanvidlee/jungle-rails/blob/master/docs/show-page.png)
 In the cart view, users can see which products they have added, and a breakdown of each product.
-!["Screenshot of cart view"]()
+!["Screenshot of cart view"](https://github.com/hanvidlee/jungle-rails/blob/master/docs/cart-page.png)
 This is what the payment process looks like if the user is ready to pay for their product.
-!["Screenshot of payment view"]()
+!["Screenshot of payment view"](https://github.com/hanvidlee/jungle-rails/blob/master/docs/pay-card-page.png)
 If user has admin access, they can add or delete products to the page.
-!["Screenshot of admin page"]()
+!["Screenshot of admin page"](https://github.com/hanvidlee/jungle-rails/blob/master/docs/admin-product-page.png)
 
 ## Setup
 
